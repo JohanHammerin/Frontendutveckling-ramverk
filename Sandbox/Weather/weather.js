@@ -14,14 +14,14 @@ const getTodaysWeather = async () => {
     let hour = d.getHours();
 
     // Uppdatera DOM med dagens väder
-    document.getElementById("h1").innerText = "Dagens väder";
+    document.getElementById("h1").textContent = "Dagens väder";
     document.getElementById(
       "h2"
-    ).innerText = `Kl. ${hour} är temperaturen ${tempArray[hour]}°C`;
+    ).textContent = `Kl. ${hour} är temperaturen ${tempArray[hour]}°C`;
   } catch (error) {
     console.error("Fel: ", error);
-    document.getElementById("h1").innerText = "Något gick fel";
-    document.getElementById("h2").innerText = "";
+    document.getElementById("h1").textContent = "Något gick fel";
+    document.getElementById("h2").textContent = "";
   }
 };
 
