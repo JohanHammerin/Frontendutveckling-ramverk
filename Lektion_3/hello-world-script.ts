@@ -84,8 +84,7 @@ const benny: User = {
 function subtractionExample(x: number, y: number): number {
   return x - y;
 }
-
 printCurrentUser(benny);
 helloWorld();
-const sum = subtractionExample("50", 25);
+const sum = subtractionExample(50, 25);
 console.log(sum);
