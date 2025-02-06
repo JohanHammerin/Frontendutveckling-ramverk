@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { User, Student } from "./types/User";
 
@@ -16,22 +16,27 @@ function App() {
     grade: "A",
   });
 
+  //const [updateCount, setUpdateCount] = useState<number>(0);
+
   // The WRONG way to console.log
   function addToScore() {
     //score = 0
     setScore(score + 1);
-    console.log(score); //<----???
+    //console.log(score); //<----???
   }
 
   // method: prev
   // TODO - why isnt console.log working?
   function addToScoreWithPreviousValue() {
     setScore((prev) => prev + 1);
-    setScore((prev) => prev + 1);
-    setScore((prev) => prev + 1);
-    console.log(score); // PROBLEM!!!
+    //setUpdateCount((prev) => prev + 1);
+    //console.log(score); // PROBLEM!!!
   }
 
+  useEffect(() => {
+    console.log(score);
+  }, [score]);
+  // Kan ha updateScore!!!
   return (
     <>
       <div>
@@ -55,7 +60,7 @@ function App() {
           </div>
           <div>
             2+2 = 4 || 2+2 = 99{" "}
-            {2 + 2 == 4 || 2 + 2 == 99 ? <span>TRUE</span> : <p>FALSE</p>}
+            {2 + 2 == 4 || 2 + 2 == 99 ? <p>TRUE</p> : <p>FALSE</p>}
           </div>
           <div>
             2+2 = 4 & 2+4 = 6{" "}
