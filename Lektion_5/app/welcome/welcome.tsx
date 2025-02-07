@@ -3,6 +3,7 @@ import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 import { useState } from "react";
 import type { User } from "~/types/User";
+import { CustomButton } from "~/components/CustomButton";
 
 export function Welcome() {
   const [user, setUser] = useState<User>({ username: "", password: "" });
@@ -15,7 +16,7 @@ export function Welcome() {
   function updateUser() {
     setUser({ username: "Benni", password: user.password }); // <-- Not optimal
     //setUser((prev) => ({prev.username = ""})); //<-- Markera med parantes för objekt, annars är det ett score
-    setUser((prevUser) => ({ ...prevUser, username: "Benni" })); // Optimals
+    setUser((prevUser) => ({ ...prevUser, username: "Benni" })); // Optimal arrow function för att ändra på objekt
   }
 
   //username = Benny <-- Om man kör updateScore nollställs allt annat
@@ -24,6 +25,30 @@ export function Welcome() {
 
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
+      <img
+        src={logoLight}
+        alt="React Router"
+        className="block w-full dark:hidden"
+      />
+
+      <img
+        src={logoLight}
+        alt="React Router"
+        className="block w-full dark:hidden"
+      />
+
+      <img
+        src={logoLight}
+        alt="React Router"
+        className="block w-full dark:hidden"
+      />
+
+      <img
+        src={logoLight}
+        alt="React Router"
+        className="block w-full dark:hidden"
+      />
+
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
         <header className="flex flex-col items-center gap-9">
           <div className="w-[500px] max-w-[100vw] p-4">
@@ -38,6 +63,10 @@ export function Welcome() {
               className="hidden w-full dark:block"
             />
           </div>
+          <CustomButton />
+          <CustomButton />
+          <CustomButton />
+
           <Link to={"/about"}>Navigate to about page</Link>
         </header>
         <div className="max-w-[300px] w-full space-y-6 px-4">
