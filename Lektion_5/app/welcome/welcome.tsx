@@ -63,9 +63,9 @@ export function Welcome() {
               className="hidden w-full dark:block"
             />
           </div>
-          <CustomButton />
-          <CustomButton />
-          <CustomButton />
+          <CustomButton customButtonName={"Hej1"} />
+          <CustomButton customButtonName={"Hej2"} />
+          <CustomButton customButtonName={"Hej3"} />
 
           <Link to={"/about"}>Navigate to about page</Link>
         </header>
