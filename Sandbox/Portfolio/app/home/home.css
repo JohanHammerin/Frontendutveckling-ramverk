@@ -1,0 +1,40 @@
+/* Grundläggande reset och body-stil */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Container för hela sidan */
+.home-container {
+  max-width: 800px;
+  margin: 50px auto; /* Centrerar container och ger lite utrymme ovanför */
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Styling för texten */
+.home-container p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Styling för länkarna */
+.home-container a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.home-container a:hover {
+  background-color: #0056b3;
+}

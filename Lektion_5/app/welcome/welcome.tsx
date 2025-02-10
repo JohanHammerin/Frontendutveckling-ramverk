@@ -6,6 +6,7 @@ import type { User } from "~/types/User";
 import { CustomButton } from "~/components/CustomButton";
 
 export function Welcome() {
+  //Hooks
   const [user, setUser] = useState<User>({ username: "", password: "" });
   const [score, setScore] = useState<number>(0);
 
