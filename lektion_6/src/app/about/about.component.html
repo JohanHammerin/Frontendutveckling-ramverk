@@ -1,0 +1,21 @@
+<p>about works!</p>
+
+<!---Button test from about.component,ts-->
+<button (click)="addToCount()">Count + 1</button>
+<p>Value of count is: {{ count }}</p>
+
+<!---Our own component, reusable component-->
+<!--Problem: addToCount() does not change value-->
+<!--Custom button.component.html was missing (click)-->
+<app-custom-button
+  buttonMessage="Test1"
+  (clicked)="addToCount()"
+></app-custom-button>
+<app-custom-button
+  buttonMessage="Test2"
+  (clicked)="addToCount()"
+></app-custom-button>
+<app-custom-button
+  buttonMessage="Test3"
+  (clicked)="addToCount()"
+></app-custom-button>

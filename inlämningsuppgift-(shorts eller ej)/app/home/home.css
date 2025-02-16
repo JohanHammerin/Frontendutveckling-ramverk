@@ -1,0 +1,57 @@
+/* Gör hela sidan till en vertikal kolumn och centrerar allt */
+div {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrerar allt horisontellt */
+  justify-content: center; /* Centrerar allt vertikalt */
+  text-align: center; /* Centrerar text */
+  font-family: "Helvetica";
+}
+
+/* Header, Main, Footer - gör dem till block så de staplas */
+header,
+main,
+footer {
+  width: 100%;
+  padding: 20px;
+}
+
+header {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+main {
+  font-size: 18px;
+  margin: 20px 0;
+  background-color: whitesmoke;
+  padding-bottom: 20px;
+}
+
+main input {
+  margin: 10px;
+  border-radius: 8px;
+}
+
+footer {
+  font-size: 14px;
+  background-color: #f0f0f0;
+}
+
+/* Stil för knappen */
+.cityBtn {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cityBtn:hover {
+  background-color: rgb(53, 144, 48);
+}
