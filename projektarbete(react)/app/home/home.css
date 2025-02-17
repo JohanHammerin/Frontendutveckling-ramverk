@@ -11,8 +11,7 @@ div {
 
 /* Header, Main, Footer - gör dem till block så de staplas */
 header,
-main,
-footer {
+main {
   width: 100%;
   padding: 20px;
 }
@@ -34,11 +33,6 @@ main {
 main input {
   margin: 10px;
   border-radius: 8px;
-}
-
-footer {
-  font-size: 14px;
-  background-color: #f0f0f0;
 }
 
 /* Stil för knappen */
