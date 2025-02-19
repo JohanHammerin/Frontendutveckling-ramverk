@@ -1,1 +1,29 @@
-<p>home works</p>
+<div class="container">
+  <header>
+    <h1>Weather Game</h1>
+    <a routerLink="/about">Cities</a>
+  </header>
+
+  <main>
+    <h3>City: {{ city.name }}</h3>
+
+    <input
+      type="number"
+      class="input"
+      [(ngModel)]="guess"
+      (input)="lastTemp = null"
+    />
+    <button class="cityBtn" (click)="checkGuess()">Guess</button>
+
+    <h3 *ngIf="lastTemp !== null">Last temperature: {{ lastTemp }}°C</h3>
+
+    <h3 *ngIf="lastPoints !== null">
+      Points this round:
+      <span [style.color]="(lastPoints ?? 0) > 0 ? 'green' : 'red'">
+        {{ (lastPoints ?? 0) > 0 ? "+" + (lastPoints ?? 0) : lastPoints ?? 0 }}
+      </span>
+    </h3>
+
+    <h3>Total Score: {{ score }}</h3>
+  </main>
+</div>
