@@ -1,5 +1,4 @@
-<h1>Welcome to Home</h1>
-
+<a routerLink="/">home</a>
 <div class="container">
   <header>
     <h1>Weather Game</h1>
@@ -9,11 +8,13 @@
   <main>
     <h3>City: {{ city.name }}</h3>
 
+    <!-- Använd en template referensvariabel "guessInput" -->
     <input
       type="number"
       class="input"
-      [(ngModel)]="guess"
-      (input)="lastTemp = null"
+      [value]="guess"
+      (input)="updateGuess(guessInput.value)"
+      #guessInput
     />
     <button class="cityBtn" (click)="checkGuess()">Guess</button>
 

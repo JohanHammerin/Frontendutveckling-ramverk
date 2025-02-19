@@ -30,6 +30,7 @@ export class HomeComponent {
   lastPoints: number | null = null;
 
   constructor() {
+    console.log('hej');
     this.newCity();
   }
 
