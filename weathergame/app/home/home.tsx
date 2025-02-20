@@ -107,7 +107,7 @@ export function Home() {
           }}
         />
         <button className="cityBtn" onClick={checkGuess}>
-          Guess
+          👍
         </button>
 
         {lastTemp !== null && <h3>Last temperature: {lastTemp}°C</h3>}
